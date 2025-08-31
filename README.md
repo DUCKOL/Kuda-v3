@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/YourUsername/KuaiDa-AI/main/assets/YsLogo.png" alt="KuaiDa AI Logo" width="150"/>
+  <img src="https://raw.githubusercontent.com/YourUsername/KuaiDa-AI/main/assets/logo.png" alt="KuaiDa AI Logo" width="150"/>
   <h1> KUDA v3</h1>
   <p>
     <strong>一个技术领先、绝对隐蔽的智能笔试辅助工具，本版本对之前的项目进行了优化，减少了卡顿（不用因为开启TUN而烦恼）</strong>
