@@ -68,19 +68,19 @@ NVM 是管理多个 Node.js 版本的行业标准。
 1.  **安装 NVM for Windows**: 访问 [NVM-Windows GitHub 发布页面](https://github.com/coreybutler/nvm-windows/releases) 并下载 `nvm-setup.zip` 进行安装。
 2.  **(可选但推荐) 配置国内镜像以加速下载**:
 
-    nvm node_mirror https://npmmirror.com/mirrors/node/
-    nvm npm_mirror https://npmmirror.com/mirrors/npm/
+    `nvm node_mirror https://npmmirror.com/mirrors/node/`
+    `nvm npm_mirror https://npmmirror.com/mirrors/npm/`
 
 3.  **安装并使用 Node.js v20**:
 
-    nvm install 20
-    nvm use 20
+    `nvm install 20`
+    `nvm use 20`
 
 #### **安装 pnpm**
 
 在安装并切换到 Node.js v20 后，运行此命令以全局安装 pnpm：
 
-npm install -g pnpm
+`npm install -g pnpm`
 
 ### 2. 核心库与框架
 
@@ -97,8 +97,8 @@ npm install -g pnpm
 ### 第一步：克隆仓库
 
 
-git clone https://github.com/YourUsername/KuaiDa-AI.git
-cd KuaiDa-AI
+`git clone https://github.com/YourUsername/KuaiDa-AI.git`
+`cd KuaiDa-AI`
 
 
 ### 第二步：配置后端 (`kuai-da-ai-backend`)
@@ -109,20 +109,20 @@ cd KuaiDa-AI
     *   复制 `.env.example` 文件并重命名为 `.env`。
     *   修改 `.env` 文件，填入你的配置：
 
-        # 数据库连接字符串 (请将 YOUR_PASSWORD 替换为您安装 PostgreSQL 时设置的密码)
-        DATABASE_URL="postgresql://postgres:YOUR_PASSWORD@localhost:5432/postgres"
+        ###### 数据库连接字符串 (请将 YOUR_PASSWORD 替换为您安装 PostgreSQL 时设置的密码)
+        `DATABASE_URL="postgresql://postgres:YOUR_PASSWORD@localhost:5432/postgres"`
 
-        # 你的 Gemini API 密钥(可配置多个，用英文逗号,分隔)
-        GEMINI_API_KEY="AIzaSy_KEY_1,AIzaSy_KEY_2"
+        ###### 你的 Gemini API 密钥(可配置多个，用英文逗号,分隔)
+        `GEMINI_API_KEY="AIzaSy_KEY_1,AIzaSy_KEY_2"`
         
-        # 添加其他模型的 API Keys (可选)
-        OPENAI_API_KEY="sk-..."
+        ###### 添加其他模型的 API Keys (可选)
+       ``` OPENAI_API_KEY="sk-..."
         DEEPSEEK_API_KEY="..."
         CLAUDE_API_KEY="..."
         SILICONFLOW_API_KEY="..."
-
-        # JWT 密钥 (可以自定义一个复杂的随机字符串)
-        JWT_SECRET="a_very_strong_and_secret_random_string_here"
+       ```
+        ###### JWT 密钥 (可以自定义一个复杂的随机字符串)
+        `JWT_SECRET="a_very_strong_and_secret_random_string_here"`
 
 4.  **应用数据库迁移**: `npx prisma migrate dev --name init`
 
@@ -145,19 +145,19 @@ cd KuaiDa-AI
 > **注意**: 如果你无法直接访问 Google API，请确保你的代理软件（如 V2Ray, Clash）已开启**系统级代理 (非 TUN 模式)**，并使用以下命令启动。
 
 
-cd kuai-da-ai-backend
+`cd kuai-da-ai-backend`
 # 启动命令 (已包含内存扩容和DNS优化)
-node --max-old-space-size=4096 --dns-result-order=ipv4first index.js // 使用ipv4地址
+`node --max-old-space-size=4096 --dns-result-order=ipv4first index.js // 使用ipv4地址`
 
-node --max-old-space-size=4096 index.js // 扩大存储空间
+`node --max-old-space-size=4096 index.js // 扩大存储空间`
 
 *成功标志：看到 `🚀 服务器正在端口 3000 上运行`。*
 
 ### 2. 启动 Web 前端 (终端 2)
 
 
-cd kuai-da-ai-webapp
-npm run dev -- --host
+`cd kuai-da-ai-webapp`
+`npm run dev -- --host`
 
 *成功标志：看到 `➜ Network: http://YOUR_LAN_IP:XXXX/`。在手机或备用电脑的浏览器中访问此 **Network 地址**。*
 
@@ -166,8 +166,8 @@ npm run dev -- --host
 > **重要**: 请以**管理员权限**打开此终端，否则全局热键可能无法注册。
 
 
-cd kuai-da-ai-desktop
-pnpm run dev
+`cd kuai-da-ai-desktop`
+`pnpm run dev`
 
 *成功标志：自动弹出一个桌面应用窗口。*
 
@@ -192,4 +192,3 @@ pnpm run dev
 2.  **添加模型 ID**: 在桌面客户端的 `src/App.vue` 文件中，将新模型的官方 ID 添加到 `models` 数组中。
 3.  **实现 API 逻辑**: 在后端的 `index.js` 文件的 `callAIModel` 函数中，添加一个新的 `if` 代码块，用于处理新模型的特定 API 端点、请求体和认证头。
 
---
