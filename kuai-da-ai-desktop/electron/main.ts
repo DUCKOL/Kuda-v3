@@ -1224,7 +1224,6 @@
 
 
 
-
 import { app, BrowserWindow, globalShortcut, desktopCapturer, ipcMain, screen } from 'electron';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';

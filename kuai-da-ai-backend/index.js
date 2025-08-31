@@ -1244,6 +1244,17 @@ const jwt = require('jsonwebtoken');
 const axios = require('axios');
 const { SocksProxyAgent } = require('socks-proxy-agent');
 require('dotenv').config({ override: true }); // 使用 override 确保 .env 优先
+console.log('============================================================');
+console.log(`
+  *   *   *****   *     *   *     *   *    *   ****** 
+  *   *  *     *  *     *   **    *   *   *    *     *
+   * *   *        *     *   * *   *   *  *     *     *
+    *     *****   *     *   *  *  *   ***      *     *
+    *          *  *     *   *   * *   *  *     *     *
+    *    *     *  *     *   *    **   *   *    *     *
+    *     *****    *****    *     *   *    *   ****** 
+  `);
+console.log('============================================================');
 
 // 全局异常捕获
 process.on('uncaughtException', (error, origin) => { console.error('FATAL: 捕获到未处理的异常:', error, origin); });
