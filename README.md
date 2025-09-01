@@ -123,7 +123,7 @@ NVM 是管理多个 Node.js 版本的行业标准。
         SILICONFLOW_API_KEY="..."
        ```
        
-        ###### JWT 密钥 (可以自定义一个复杂的随机字符串)
+        JWT 密钥 (可以自定义一个复杂的随机字符串)
         `JWT_SECRET="a_very_strong_and_secret_random_string_here"`
 
 4.  **应用数据库迁移**: `npx prisma migrate dev --name init`
