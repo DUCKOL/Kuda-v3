@@ -42,7 +42,7 @@
 2.  **`kuai-da-ai-webapp`**: 用户的答案仪表盘。这是一个 Vue.js 单页应用，为用户提供一个干净、实时的界面，用于在任何带有浏览器的次要设备（如手机、平板）上查看 AI 生成的答案。
 3.  **`kuai-da-ai-desktop`**: 数据采集代理。这个基于 Electron 的桌面应用在主电脑上静默运行，负责捕获全局热键以进行屏幕截图和模型切换，而不会中断用户的工作流程。
 
----
+
 / (项目根目录)
 ├── 📂 kuai-da-ai-backend/     # 后端服务 (Node.js, Express, Prisma)
 ├── 📂 kuai-da-ai-webapp/      # Web 前端 (Vue.js, Vite, Pinia)
